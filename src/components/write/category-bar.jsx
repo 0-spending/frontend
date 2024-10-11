@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CategoryButton from './category-button'
 
-import MapIcon from '../assets/icons/map-icon.svg'
+import MapIcon from '../../assets/icons/map-icon.svg'
 
 const CategoryBarWrap = styled.div`
   display: flex;
