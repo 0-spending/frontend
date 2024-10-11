@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import styled from 'styled-components'
 
-import Button from './ui/button'
+import Button from '../ui/button'
 import ImageIcon from '../assets/icons/image-icon.svg'
 import FolderIcon from '../assets/icons/folder-icon.svg'
 import ClipIcon from '../assets/icons/clip-icon.svg'
