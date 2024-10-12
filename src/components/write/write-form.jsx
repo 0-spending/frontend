@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 import Button from '../ui/button'
 import ImageIcon from '../../assets/icons/image-icon.svg'
@@ -26,6 +27,7 @@ const WriteContainer = styled.div`
 const IconRow = styled.div`
     display: flex;
     gap: 10px;
+    margin-left: 5px;
 `;
 
 const TitleInput = styled.input`
@@ -41,20 +43,44 @@ const BodyInput = styled.textarea`
     height: 24px;
     border: none;
     resize: none;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: ${(props) => props.theme.fontSizes.small};
     color: ${(props) => props.theme.colors.grayscale[800]};
     font-weight: 700;
     font-family: Segoe UI;
     overflow: hidden;
     line-height: 1.5;
+    box-sizing: border-box;
 `;
 
 const UploadButton = styled.div`
     align-self: flex-end;
 `;
 
-export default function WriteForm() {
+const TodaySending = styled.div`
+    font-weight: 1000;
+    color: ${(props) => props.theme.colors.grayscale[800]};
+    margin-top: 20px;
+    margin-left: 2px;
+`;
+
+const PriceInput = styled.input`
+    width: 100px;
+    font-size: ${(props) => props.theme.fontSizes.small};
+    color: ${(props) => props.theme.colors.grayscale[800]};
+    font-weight: 1000;
+    border: none;
+    text-align: right;
+`;
+
+const MapContainer = styled.div`
+    width: 600px;
+    height: 260px;
+    background-color: lightgray;
+    margin-top: 20px;
+`;
+
+export default function WriteForm({ selectedCategory }) {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const textAreaRef = useRef(null);
@@ -70,36 +96,63 @@ export default function WriteForm() {
     const handleInput = (e) => {
         const textarea = textAreaRef.current;
         textarea.style.height = 'auto';
-        textarea.style.height = `${textarea.scrollHeight}px`;
-        setText(e.target.value);
+        textarea.style.height = `${textarea.scrollHeight-25}px`;
+
+        setBody(e.target.value);
     };
 
     return (
         <FormContainer>
             <IconRow>
-                <img src={ImageIcon} alt="Icon" width="25" height="25" />
-                <img src={FolderIcon} alt="Icon" width="25" height="25" />
-                <img src={ClipIcon} alt="Icon" width="25" height="25" />
-                <img src={ContainerIcon} alt="Icon" width="25" height="25" />
+                <img src={ImageIcon} alt="Icon" width="20" height="20" />
+                <img src={FolderIcon} alt="Icon" width="20" height="20" />
+                <img src={ClipIcon} alt="Icon" width="20" height="20" />
+                <img src={ContainerIcon} alt="Icon" width="20" height="20" />
             </IconRow>
 
             <WriteContainer>
-                <TitleInput 
-                    value={title} 
+                <TitleInput
+                    value={title}
                     onClick={(e) => handleTitleClick(e.target.value)}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="글 제목"
                 ></TitleInput>
-                <BodyInput 
-                    ref={textAreaRef}
-                    value={body}
-                    onClick={(e) => handleBodyClick(e.target.value)}
-                    onChange={(e) => setBody(e.target.value)}
-                    onInput={handleInput}
-                    placeholder="내용을 입력하세요"
-                ></BodyInput>
+
+                {selectedCategory === 0 && (
+                    <>
+                        <TodaySending>오늘 소비 금액: <PriceInput placeholder='____________'/>원</TodaySending>
+                        <BodyInput
+                            ref={textAreaRef}
+                            value={body}
+                            onClick={(e) => handleBodyClick(e.target.value)}
+                            onChange={handleInput}
+                            placeholder="내용을 입력하세요"
+                        />
+                    </>
+                )}
+
+                {selectedCategory === 2 && (
+                    <>
+                        <BodyInput
+                            ref={textAreaRef}
+                            value={body}
+                            onChange={handleInput}
+                            placeholder="내용을 입력하세요"
+                        />
+                        <MapContainer></MapContainer>
+                    </>
+                )}
+
+                {selectedCategory !== 0 && selectedCategory !== 2 && (
+                    <BodyInput
+                        ref={textAreaRef}
+                        value={body}
+                        onChange={handleInput}
+                        placeholder="내용을 입력하세요"
+                    />
+                )}
             </WriteContainer>
-            
+
             <UploadButton>
                 <Button
                     variant="primary-700"
