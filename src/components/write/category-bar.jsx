@@ -13,7 +13,7 @@ const CategoryBarWrap = styled.div`
 const Title = styled.div`
   color: ${(props) => props.theme.colors.grayscale[800]};
   font-size: ${(props) => props.theme.fontSizes.regular};
-  font-weight: 700;
+  font-weight: 800;
 `;
 
 const RowContainer = styled.div`
@@ -21,13 +21,13 @@ const RowContainer = styled.div`
   justify-content: space-between;
 `;
 
-export default function CategoryBar() {
+export default function CategoryBar({ setSelectedCategory }) {
   return (
     <CategoryBarWrap>
       <Title>카테고리 선택</Title>
       <RowContainer>
-          <CategoryButton />
-          <img src={MapIcon} alt="Icon" width="48" height="56"/>
+          <CategoryButton setSelectedCategory={setSelectedCategory} />
+          <img src={MapIcon} alt="Icon" width="61" height="61" />
       </RowContainer>
     </CategoryBarWrap>
   )
