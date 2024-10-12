@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme.js';
 
 import WritePost from './pages/write-post.jsx';
+import ModifyProfile from './pages/modify_profile.jsx';
 import HomeGuest from './pages/home-guest.jsx';
 import HomeLogin from './pages/home-login.jsx';
 import LoginPage from './pages/LoginPage';
@@ -16,8 +17,14 @@ const router = createBrowserRouter([
   { path: '/homelogin', element: <HomeLogin /> },
   { path: '/login', element: <LoginPage /> },          
   { path: '/signup', element: <SignupPage /> },   
-  { path: '/profile', element: <ProfilePage /> }, 
-])
+  {
+    path: '/profile',
+    element: <ProfilePage />,
+    children: [
+      { path: 'modify', element: <ModifyProfile /> },
+    ],
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
