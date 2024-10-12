@@ -1,6 +1,5 @@
 /* src/styles/LoginSignup.css */
 
-/* 전체 페이지 가운데 정렬 */
 .container {
   display: flex;
   flex-direction: column;
@@ -10,7 +9,6 @@
   background-color: #f4f4f4;
 }
 
-/* 로그인 및 회원가입 폼을 감싸는 직사각형 박스 */
 .login-box {
   width: 400px;
   padding: 40px;
@@ -32,7 +30,7 @@ p {
   margin-bottom: 20px;
 }
 
-/* 입력 필드와 버튼의 크기 조정 */
+
 .input-group {
   margin-bottom: 15px;
 }

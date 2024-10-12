@@ -11,13 +11,11 @@ const SignupPage = () => {
   const handleSignup = (event) => {
     event.preventDefault();
 
-    // 회원가입 로직
     alert(`회원가입 완료! 닉네임: ${username}`);
 
-    // 회원가입 완료 후 닉네임을 localStorage에 저장
+    
     localStorage.setItem('username', username);
 
-    // 프로필 페이지로 이동
     navigate('/profile');
   };
 
