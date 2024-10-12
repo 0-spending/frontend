@@ -11,15 +11,15 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // 로그인 로직
+  
     if (username === 'admin' && password === '1234') {
-      // 로그인 성공 시 닉네임을 localStorage에 저장
+      
       localStorage.setItem('username', username);
       
-      // 프로필 페이지로 이동
+      
       navigate('/profile');
     } else {
-      // 로그인 실패 시 회원가입 페이지로 이동
+      
       alert('로그인 실패! 회원가입 페이지로 이동합니다.');
       navigate('/signup');
     }
