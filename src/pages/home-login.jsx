@@ -68,6 +68,7 @@ const HomeGuest = () => {
   return (
     <HomeGuestContainer>
       <OvalBackground1></OvalBackground1>
+      <OvalBackground2></OvalBackground2>
       <UserInfoWrapper>
         <UserInfoGuest />
       </UserInfoWrapper>
@@ -83,7 +84,6 @@ const HomeGuest = () => {
       <ExpenseTextWrapper>
         <ExpenseText />
       </ExpenseTextWrapper>
-      <OvalBackground2></OvalBackground2>
     </HomeGuestContainer>
   );
 };
