@@ -5,7 +5,7 @@ const ExpenseListContainer = styled.section`
   width: 467px;
   min-height: 340px;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fcfcfc;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
   padding:15px;

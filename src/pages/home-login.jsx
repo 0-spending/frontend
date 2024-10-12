@@ -5,6 +5,8 @@ import React from 'react';
 import UserInfoLogin from '../components/homepage/userinfo-login';
 import Calendar from '../components/homepage/calendar';
 import ExpenseList from '../components/homepage/expenselist';
+import ExpenseText from '../components/homepage/expensetext';
+
 
 export default function HomeLogin() {
   return (
@@ -13,6 +15,7 @@ export default function HomeLogin() {
         <UserInfoLogin />
         <Calendar />
         <ExpenseList />
+        <ExpenseText />
       </main>
     </div>
   );
