@@ -1,4 +1,4 @@
-// src/pages/ProfilePage.jsx
+
 import React, { useEffect, useState } from 'react';
 import '../styles/ProfilePage.css';
 
