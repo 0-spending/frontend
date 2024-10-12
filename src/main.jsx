@@ -17,13 +17,8 @@ const router = createBrowserRouter([
   { path: '/homelogin', element: <HomeLogin /> },
   { path: '/login', element: <LoginPage /> },          
   { path: '/signup', element: <SignupPage /> },   
-  {
-    path: '/profile',
-    element: <ProfilePage />,
-    children: [
-      { path: 'modify', element: <ModifyProfile /> },
-    ],
-  },
+  { path: '/profile', element: <ProfilePage /> },
+  { path: '/profile/modify', element: <ModifyProfile /> },
 ]);
 
 createRoot(document.getElementById('root')).render(
