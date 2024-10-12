@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/ProfilePage'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
