@@ -8,7 +8,7 @@ const ExpenseListContainer = styled.section`
   background-color: #fcfcfc;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
-  padding:15px;
+  padding:20px;
   display: flex; 
   flex-direction: column; /* 세로로 배치 */
   justify-content: flex-start; /* 컨텐츠가 상단부터 시작 */

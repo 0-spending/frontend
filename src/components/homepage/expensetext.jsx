@@ -6,6 +6,7 @@ const ExpenseContainer = styled.div`
   width: 467px;
   min-height: 319px;
   max-height: 620px;
+  margin-bottom: 25px;
   background-color: #fcfcfc;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +22,7 @@ const ExpenseContent = styled.div`
     margin-top:37px;
     margin-left: 51px;
     margin-right: 166px;
-    margin-bottom: 49px;
+    margin-bottom: 10px;
     padding-bottom:42px;
 `
 
