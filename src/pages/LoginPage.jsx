@@ -18,11 +18,12 @@ const LoginPage = () => {
     }
   };
 
-
-  
   return (
     <div className="container">
       <div className="login-box">
+        <h1 className="welcome-text">Welcome!</h1>
+        <h2 className="sign-in-text">Sign in to</h2>
+        <p className="sub-text">0지출 is simply</p>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label id="login-label-username" htmlFor="username">닉네임</label>
@@ -30,6 +31,7 @@ const LoginPage = () => {
               type="text"
               id="username"
               value={username}
+              placeholder="Enter your user name"
               onChange={(e) => setUsername(e.target.value)}
               required
             />
@@ -40,14 +42,18 @@ const LoginPage = () => {
               type="password"
               id="password"
               value={password}
+              placeholder="Enter your Password"
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <button id="login-btn" type="button" onClick={handleSubmit}>
-            로그인
+          <button id="login-btn" type="submit">
+            Login
           </button>
         </form>
+      </div>
+      <div className="illustration">
+        <img src="illustration_image_url" alt="Illustration" />
       </div>
     </div>
   );
