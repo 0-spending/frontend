@@ -2,12 +2,12 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import UserInfoGuest from '../components/homepage/userinfo-guest';
+import UserInfoLogin from '../components/homepage/userinfo-login';
 import ExpenseList from '../components/homepage/expenselist';
 import Calendar from '../components/homepage/calendar';
 import ExpenseText from '../components/homepage/expensetext';
 
-const HomeGuestContainer = styled.div`
+const HomeLoginContainer = styled.div`
   position: relative; /* 부모 요소를 relative로 설정 */
   width: 100%;
   min-height: 100vh; /* 화면의 최소 높이를 100vh로 설정 */
@@ -64,13 +64,13 @@ const OvalBackground2 = styled.div`
   left: 0px; /* 화면 왼쪽에서 50px 띄움 */
 `;
 
-const HomeGuest = () => {
+const HomeLogin = () => {
   return (
-    <HomeGuestContainer>
+    <HomeLoginContainer>
       <OvalBackground1></OvalBackground1>
       <OvalBackground2></OvalBackground2>
       <UserInfoWrapper>
-        <UserInfoGuest />
+        <UserInfoLogin />
       </UserInfoWrapper>
 
       <ExpenseListWrapper>
@@ -84,8 +84,8 @@ const HomeGuest = () => {
       <ExpenseTextWrapper>
         <ExpenseText />
       </ExpenseTextWrapper>
-    </HomeGuestContainer>
+    </HomeLoginContainer>
   );
 };
 
-export default HomeGuest;
+export default HomeLogin;

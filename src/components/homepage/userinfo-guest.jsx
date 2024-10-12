@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProfileImage from '../../assets/profile_image.png';
+import { useNavigate } from 'react-router-dom'; // useNavigate 가져오기
 
 const UserInfoContainer = styled.section`
     width:270px;
@@ -36,13 +37,19 @@ const Button = styled.button`
 `;
 
 const UserInfo = () => {
-  return (
-    <UserInfoContainer>
-      <Avatar src={ProfileImage} alt="User Avatar" />
-      <h2>고다윤 님</h2>
-      <Button>시작하기</Button>
-    </UserInfoContainer>
-  );
-};
+    const navigate = useNavigate(); // useNavigate 훅 사용
+  
+    const handleSignup = () => {
+      navigate('/signup'); // /signup 경로로 이동
+    };
+  
+    return (
+      <UserInfoContainer>
+        <Avatar src={ProfileImage} alt="User Avatar" />
+        <h2>고다윤 님</h2>
+        <Button onClick={handleSignup}>시작하기</Button>
+      </UserInfoContainer>
+    );
+  };
 
 export default UserInfo;
