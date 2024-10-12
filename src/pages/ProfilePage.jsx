@@ -6,7 +6,6 @@ const ProfilePage = () => {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    // localStorage에서 저장된 닉네임을 가져옴
     const savedUsername = localStorage.getItem('username');
     if (savedUsername) {
       setUsername(savedUsername);
@@ -22,7 +21,6 @@ const ProfilePage = () => {
         <h2>{username} 님</h2>
         <div className="button-group">
           <button className="profile-btn">프로필 수정</button>
-          {/* 글 작성 버튼은 회색이지만 클릭할 수 있도록 설정 */}
           <button className="write-btn">글 작성</button>
         </div>
       </div>
