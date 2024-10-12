@@ -20,6 +20,17 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    box-shadow: ${({ shadow, theme }) =>
+      shadow ? `0px 0px 0px 4px ${theme.colors.primary[300]}` : 'none'};
+    border: 2px solid ${({ theme, borderColor }) =>
+      getColor(theme, borderColor, theme.colors.primary[800])};
+
+    & > * {
+      color: ${({ theme }) => `${theme.colors.grayscale[1300]}`};
+    }
+  }
 `;
 
 export default Button;
