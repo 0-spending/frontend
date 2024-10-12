@@ -16,6 +16,8 @@ const SignupPage = () => {
     navigate('/profile');
   };
 
+
+  
   return (
     <div className="signup-container">
       <div className="signup-box">

@@ -25,7 +25,7 @@
 .input-group label {
   margin-bottom: 5px;
   font-size: 14px;
-  text-align: left; /* Ensure left alignment */
+  text-align: left; 
 }
 
 .input-group input {
@@ -39,7 +39,7 @@
 #login-btn {
   width: 100%;
   padding: 10px 20px;
-  background-color: #6f6f6f; /* Same color as in the first screenshot */
+  background-color: #6f6f6f; 
   color: white;
   border: none;
   border-radius: 10px;
@@ -48,24 +48,24 @@
   text-align: center;
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* Center text inside button */
-  align-items: center; /* Vertically align text */
+  justify-content: center; 
+  align-items: center; 
 }
 
 #login-btn:hover {
   background-color: #8a8a8a;
 }
 
-/* Additional styles for button appearance */
+
 #login-btn::after {
   font-size: 20px;
   margin-left: 10px;
   color: white;
 }
 
-/* Unique label styles */
+
 #login-label-username,
 #login-label-password {
-  text-align: left; /* Left-align labels */
-  font-weight: normal; /* Ensure labels are not bold */
+  text-align: left; 
+  font-weight: normal; 
 }
