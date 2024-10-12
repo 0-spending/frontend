@@ -1,7 +1,8 @@
-// src/pages/SignupPage.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/LoginSignup.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const SignupPage = () => {
   const [username, setUsername] = useState('');
@@ -10,40 +11,43 @@ const SignupPage = () => {
 
   const handleSignup = (event) => {
     event.preventDefault();
-
     alert(`회원가입 완료! 닉네임: ${username}`);
-
-    
     localStorage.setItem('username', username);
-
     navigate('/profile');
   };
 
   return (
-    <div className="container">
-      <div className="login-box">
+    <div className="signup-container">
+      <div className="signup-box">
         <h1>회원 정보가 없습니다.</h1>
         <p>간단한 설정으로 0지출을 시작해볼까요?</p>
+        <div className="icon-container">
+          <FontAwesomeIcon icon={faUserPlus} style={{ fontSize: '60px', color: '#000' }} />
+        </div>
         <form onSubmit={handleSignup}>
           <div className="input-group">
-            <label htmlFor="username">닉네임</label>
+            <span className="icon">
+              <FontAwesomeIcon icon={faUserPlus} />
+            </span>
             <input
               type="text"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="닉네임을 입력하세요"
+              placeholder="닉네임"
               required
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password">비밀번호</label>
+            <span className="icon">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </span>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="비밀번호를 입력하세요"
+              placeholder="비밀번호"
               required
             />
           </div>
@@ -55,3 +59,4 @@ const SignupPage = () => {
 };
 
 export default SignupPage;
+

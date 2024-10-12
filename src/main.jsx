@@ -10,6 +10,7 @@ import HomeLogin from './pages/home-login.jsx';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/ProfilePage'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const router = createBrowserRouter([
   { path: '/', element: <HomeGuest /> },

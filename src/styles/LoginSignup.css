@@ -1,65 +1,85 @@
-/* src/styles/LoginSignup.css */
-
-.container {
+.signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f4f4f4;
+  min-height: 100vh;
+  background-color: #ffffff;
 }
 
-.login-box {
-  width: 400px;
-  padding: 40px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.signup-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
-
 
 .input-group {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
+  position: relative;
 }
 
 .input-group input {
   width: 100%;
-  padding: 12px;
+  padding: 12px 12px 12px 40px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
   box-sizing: border-box;
+  color: #000000;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: #888;
 }
 
 .submit-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #b3b3b3;
+  color: #000000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
 }
 
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: #8a8a8a;
+}
+
+.submit-btn::after {
+  content: '›';
+  font-size: 20px;
+  color: #000000;
+}
+
+.icon-container {
+  text-align: center;
+  margin-bottom: 40px;
 }

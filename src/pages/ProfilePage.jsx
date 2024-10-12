@@ -1,6 +1,7 @@
-// src/pages/ProfilePage.jsx
 import React, { useEffect, useState } from 'react';
 import '../styles/ProfilePage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons'; // Regular User 아이콘 사용
 
 const ProfilePage = () => {
   const [username, setUsername] = useState('');
@@ -16,12 +17,12 @@ const ProfilePage = () => {
     <div className="profile-container">
       <div className="profile-box">
         <div className="icon-container">
-          <i className="fa fa-user-circle icon"></i> {/* 기본 프로필 사진 */}
+          <FontAwesomeIcon icon={faUser} style={{ fontSize: '100px', color: '#000' }} />
         </div>
         <h2>{username} 님</h2>
         <div className="button-group">
-          <button className="profile-btn">프로필 수정</button>
-          <button className="write-btn">글 작성</button>
+          <button id="profile-btn" className="profile-btn">프로필 수정</button>
+          <button id="write-btn" className="write-btn">글 작성</button>
         </div>
       </div>
     </div>

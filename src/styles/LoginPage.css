@@ -1,12 +1,10 @@
-/* src/styles/LoginSignup.css */
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 
 .login-box {
@@ -18,41 +16,56 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .input-group {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group label {
-  display: block;
   margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left; /* Ensure left alignment */
 }
 
 .input-group input {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-.submit-btn {
+#login-btn {
   width: 100%;
-  padding: 12px;
-  background-color: #4CAF50;
+  padding: 10px 20px;
+  background-color: #6f6f6f; /* Same color as in the first screenshot */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Center text inside button */
+  align-items: center; /* Vertically align text */
 }
 
-.submit-btn:hover {
-  background-color: #45a049;
+#login-btn:hover {
+  background-color: #8a8a8a;
+}
+
+/* Additional styles for button appearance */
+#login-btn::after {
+  font-size: 20px;
+  margin-left: 10px;
+  color: white;
+}
+
+/* Unique label styles */
+#login-label-username,
+#login-label-password {
+  text-align: left; /* Left-align labels */
+  font-weight: normal; /* Ensure labels are not bold */
 }
