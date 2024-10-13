@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/GNB.css';  // 스타일 파일을 불러옴
+import '../styles/GNB.css';
 
 const GNB = () => {
   return (

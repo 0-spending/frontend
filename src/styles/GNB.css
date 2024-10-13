@@ -1,10 +1,11 @@
 .gnb {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
+  height: 20px;
+  padding-bottom: 30px;
 }
 
 .gnb-logo a {
@@ -12,12 +13,14 @@
   font-weight: bold;
   color: #004d00;  /* 로고 색상 */
   text-decoration: none;
+  margin-left: 30px;
 }
 
 .gnb-menu ul {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   list-style: none;
+  margin-left: 670px;
 }
 
 .gnb-menu ul li a {
@@ -36,6 +39,7 @@
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 .gnb-start .start-button:hover {
