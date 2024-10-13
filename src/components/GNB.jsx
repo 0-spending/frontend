@@ -17,7 +17,7 @@ const GNB = () => {
         </ul>
       </nav>
       <div className="gnb-start">
-        <Link to="/start" className="start-button">시작하기</Link>
+        <Link to="/login" className="start-button">시작하기</Link>
       </div>
     </header>
   );

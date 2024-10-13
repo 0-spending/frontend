@@ -20,7 +20,7 @@ const HomeLoginContainer = styled.div`
 
 const UserInfoWrapper = styled.div`
   position: absolute;
-  top: 180px; 
+  top: 150px; 
   right: 880px;
 `;
 
