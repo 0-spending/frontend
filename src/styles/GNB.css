@@ -14,10 +14,17 @@
   text-decoration: none;
 }
 
+.gnb-menu {
+  display: flex;
+  justify-content: flex-end; /* 메뉴를 오른쪽으로 정렬 */
+  flex-grow: 1; /* 남은 공간을 채움 */
+}
+
 .gnb-menu ul {
   display: flex;
   gap: 20px;
   list-style: none;
+  margin-right: 0; /* 메뉴가 끝에 붙도록 수정 */
 }
 
 .gnb-menu ul li a {
@@ -28,6 +35,10 @@
 
 .gnb-menu ul li a:hover {
   color: #000;  /* 메뉴 호버 시 색상 */
+}
+
+.gnb-start {
+  margin-left: auto; /* 시작하기 버튼을 오른쪽 끝으로 이동 */
 }
 
 .gnb-start .start-button {
