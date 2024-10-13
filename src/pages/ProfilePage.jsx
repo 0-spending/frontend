@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/ProfilePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons'; // Regular User 아이콘 사용
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 
 const ProfilePage = () => {
   const [username, setUsername] = useState('');
