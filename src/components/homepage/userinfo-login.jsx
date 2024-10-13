@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProfileImage from '../../assets/profile_image.png';
+import { useNavigate } from 'react-router-dom'; // useNavigate 가져오기
 
 const UserInfoContainer = styled.section`
     width:261px;
@@ -54,12 +55,24 @@ const Button2 = styled.button`
 `;
 
 const UserInfo = () => {
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
+  // 버튼1 클릭 시 프로필 페이지로 이동
+  const goToProfile = () => {
+    navigate('/profile');
+  };
+
+  // 버튼2 클릭 시 글 작성 페이지로 이동
+  const goToWrite = () => {
+    navigate('/write');
+  };
+
   return (
     <UserInfoContainer>
       <Avatar src={ProfileImage} alt="User Avatar" />
       <h2>고다윤 님</h2>
-      <Button1>프로필 수정</Button1><br></br>
-      <Button2>글 작성</Button2>
+      <Button1 onClick={goToProfile}>프로필 수정</Button1><br></br>
+      <Button2 onClick={goToWrite}>글 작성</Button2>
     </UserInfoContainer>
   );
 };
