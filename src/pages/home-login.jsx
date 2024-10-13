@@ -19,7 +19,7 @@ const HomeLoginContainer = styled.div`
 
 const UserInfoWrapper = styled.div`
   position: absolute;
-  top: 180px;  
+  top: 180px; 
   right: 880px;
 `;
 
@@ -31,7 +31,7 @@ const ExpenseListWrapper = styled.div`
 
 const CalendarWrapper = styled.div`
   position: relative;
-  top: 540px;
+  top: 550px;
   left:0;
   width: fit-content;
   margin-bottom:100px;
