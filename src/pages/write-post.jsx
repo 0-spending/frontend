@@ -13,8 +13,8 @@ export default function WritePost() {
 
   return (
     <Wrapper>
-        <CategoryBar setSelectedCategory={setSelectedCategory} />
-        <WriteForm selectedCategory={selectedCategory} />
+      <CategoryBar setSelectedCategory={setSelectedCategory} />
+      <WriteForm selectedCategory={selectedCategory} />
     </Wrapper>
   );
 }

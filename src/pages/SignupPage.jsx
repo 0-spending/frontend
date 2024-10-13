@@ -13,10 +13,8 @@ const SignupPage = () => {
     event.preventDefault();
     alert(`회원가입 완료! 닉네임: ${username}`);
     localStorage.setItem('username', username);
-    navigate('/profile');
+    navigate('/homelogin');
   };
-
-
   
   return (
     <div className="signup-container">

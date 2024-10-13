@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import styled from 'styled-components'
-import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 import Button from '../ui/button'
 import ImageIcon from '../../assets/icons/image-icon.svg'
@@ -84,6 +84,7 @@ export default function WriteForm({ selectedCategory }) {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const textAreaRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleTitleClick = (value) => {
         setTitle(value);
@@ -100,6 +101,10 @@ export default function WriteForm({ selectedCategory }) {
 
         setBody(e.target.value);
     };
+
+    const handlePosting = () => {
+        navigate('/homelogin');
+    }
 
     return (
         <FormContainer>
@@ -160,6 +165,7 @@ export default function WriteForm({ selectedCategory }) {
                     height="48px"
                     borderColor="primary-800"
                     style={{ color: 'white', fontWeight: '700' }}
+                    onClick = {handlePosting}
                 >
                     게시
                 </Button>

@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import styled from 'styled-components'
 import Button from '../ui/button'
 import InputModal from './input-modal'
+import { useNavigate } from 'react-router-dom';
 
 import AvatarIcon from '../../assets/icons/avatar.svg'
 import NickNameIcon from '../../assets/icons/nickname-icon.svg'
@@ -13,7 +14,7 @@ const FormContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 75vh;
     gap: 13px;
 `;
 
@@ -51,6 +52,8 @@ const LeftAlignedButton = styled(Button)`
 
 export default function ModifyForm() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [nickname, setNickname] = useState('');
+    const navigate = useNavigate();
 
     const handleNickNameClick = () => {
         setIsModalOpen(true);
@@ -60,27 +63,35 @@ export default function ModifyForm() {
         setIsModalOpen(false);
     };
 
+    const handleModifyComplete = () => {
+        navigate('/homelogin');
+    }
+
+    const handleLogout = () => {
+        navigate('/');
+    }
+
     return (
         <FormContainer>
             <img src={AvatarIcon} alt="Icon" width="88" height="88" style={{ margin: '20px' }} />
             <InputContainer>
                 <Icon src={NickNameIcon} alt="Icon" width={24} height={24} />
-                <Input type='text' placeholder='닉네임' onClick={handleNickNameClick} />
+                <Input type='text' placeholder='닉네임' value={nickname} onClick={handleNickNameClick} />
             </InputContainer>
             <InputContainer>
                 <Icon src={PasswordIcon} alt="Icon" width={24} height={24} />
                 <Input type='text' placeholder='비밀번호' />
             </InputContainer>
-            <LeftAlignedButton width='423px' height='59px' variant='primary-100'>
+            <LeftAlignedButton width='423px' height='59px' variant='primary-100' onClick={handleModifyComplete}>
                 수정 완료
                 <img src={Arrow} alt="Icon" width="20" height="20" />
             </LeftAlignedButton>
-            <LeftAlignedButton width='423px' height='59px' variant='primary-100'>
+            <LeftAlignedButton width='423px' height='59px' variant='primary-100'  onClick={handleLogout}>
                 로그아웃
                 <img src={Arrow} alt="Icon" width="20" height="20" />
             </LeftAlignedButton>
 
-            {isModalOpen && <InputModal onClose={handleCloseModal} />}
+            {isModalOpen && <InputModal onClose={handleCloseModal} setNickname={setNickname} />}
         </FormContainer>
     )
 }

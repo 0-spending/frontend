@@ -59,7 +59,7 @@ const UserInfo = () => {
 
   // 버튼1 클릭 시 프로필 페이지로 이동
   const goToProfile = () => {
-    navigate('/profile');
+    navigate('/profile/modify');
   };
 
   // 버튼2 클릭 시 글 작성 페이지로 이동

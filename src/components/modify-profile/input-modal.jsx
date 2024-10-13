@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ModalOverlay = styled.div`
@@ -60,14 +60,24 @@ const PressButton = styled.button`
   border-radius: 8px;
 `;
 
-export default function InputModal({ onClose }) {
+export default function InputModal({ onClose, setNickname }) {
+  const [inputValue, setInputValue] = useState('');
+
+    const handleConfirm = () => {
+        setNickname(inputValue);
+        onClose();
+    }
+
     return (
         <ModalOverlay>
             <ModalContent>
                 <ModalTitle>닉네임</ModalTitle>
-                <ModalInput />
+                <ModalInput 
+                  value={inputValue} 
+                  onChange={(e) => setInputValue(e.target.value)}
+                  />
                 <CloseButton onClick={onClose}>취소</CloseButton>
-                <PressButton>확인</PressButton>
+                <PressButton onClick={handleConfirm}>확인</PressButton>
             </ModalContent>
         </ModalOverlay>
     )
