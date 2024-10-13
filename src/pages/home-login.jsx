@@ -6,6 +6,7 @@ import UserInfoLogin from '../components/homepage/userinfo-login';
 import ExpenseList from '../components/homepage/expenselist';
 import Calendar from '../components/homepage/calendar';
 import ExpenseText from '../components/homepage/expensetext';
+import GNB from '../components/GNB'
 
 const HomeLoginContainer = styled.div`
   position: relative; /* 부모 요소를 relative로 설정 */
@@ -89,25 +90,28 @@ const HomeLogin = () => {
     }, []);
   
     return (
-      <HomeLoginContainer>
-        <OvalBackground1></OvalBackground1>
-        <OvalBackground2></OvalBackground2>
-        <UserInfoWrapper>
-          <UserInfoLogin />
-        </UserInfoWrapper>
-  
-        <ExpenseListWrapper>
-          <ExpenseList />
-        </ExpenseListWrapper>
-  
-        <CalendarWrapper>
-          <Calendar expenses={expenses} /> {/* 데이터를 캘린더에 전달 */}
-        </CalendarWrapper>
-  
-        <ExpenseTextWrapper>
-          <ExpenseText />
-        </ExpenseTextWrapper>
-      </HomeLoginContainer>
+      <>
+        <GNB />
+        <HomeLoginContainer>
+          <OvalBackground1></OvalBackground1>
+          <OvalBackground2></OvalBackground2>
+          <UserInfoWrapper>
+            <UserInfoLogin />
+          </UserInfoWrapper>
+    
+          <ExpenseListWrapper>
+            <ExpenseList />
+          </ExpenseListWrapper>
+    
+          <CalendarWrapper>
+            <Calendar expenses={expenses} /> {/* 데이터를 캘린더에 전달 */}
+          </CalendarWrapper>
+    
+          <ExpenseTextWrapper>
+            <ExpenseText />
+          </ExpenseTextWrapper>
+        </HomeLoginContainer>
+      </>
     );
   };
   

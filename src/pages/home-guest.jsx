@@ -4,6 +4,7 @@ import UserInfoGuest from '../components/homepage/userinfo-guest';
 import ExpenseList from '../components/homepage/expenselist';
 // import Calendar from '../components/homepage/calendar';
 import ExpenseText from '../components/homepage/expensetext';
+import GNB from '../components/GNB'
 
 const HomeGuestContainer = styled.div`
   position: relative; /* 부모 요소를 relative로 설정 */
@@ -57,21 +58,24 @@ const OvalBackground2 = styled.div`
 
 const HomeGuest = () => {
   return (
-    <HomeGuestContainer>
-      <OvalBackground1></OvalBackground1>
-      <UserInfoWrapper>
-        <UserInfoGuest />
-      </UserInfoWrapper>
+    <>
+      <GNB />
+      <HomeGuestContainer>
+        <OvalBackground1></OvalBackground1>
+        <UserInfoWrapper>
+          <UserInfoGuest />
+        </UserInfoWrapper>
 
-      <ExpenseListWrapper>
-        <ExpenseList />
-      </ExpenseListWrapper>
+        <ExpenseListWrapper>
+          <ExpenseList />
+        </ExpenseListWrapper>
 
-      <ExpenseTextWrapper>
-        <ExpenseText />
-      </ExpenseTextWrapper>
-      <OvalBackground2></OvalBackground2>
-    </HomeGuestContainer>
+        <ExpenseTextWrapper>
+          <ExpenseText />
+        </ExpenseTextWrapper>
+        <OvalBackground2></OvalBackground2>
+      </HomeGuestContainer>
+    </>
   );
 };
 
