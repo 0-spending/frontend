@@ -1,0 +1,43 @@
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.gnb-logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #004d00;  /* 로고 색상 */
+  text-decoration: none;
+}
+
+.gnb-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.gnb-menu ul li a {
+  text-decoration: none;
+  color: #555;  /* 기본 메뉴 색상 */
+  font-size: 1em;
+}
+
+.gnb-menu ul li a:hover {
+  color: #000;  /* 메뉴 호버 시 색상 */
+}
+
+.gnb-start .start-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.gnb-start .start-button:hover {
+  background-color: #333;  /* 버튼 호버 시 색상 */
+}
