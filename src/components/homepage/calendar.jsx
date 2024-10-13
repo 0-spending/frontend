@@ -4,19 +4,18 @@ import styled from 'styled-components';
 const CalendarContainer = styled.div`
   width: 600px;
   height: 750px;
-  margin: 0 auto;
+  margin: 0;
   background-color: white;
   border-radius: 30px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   padding-right: 45px;
   padding-left: 45px;
   padding-bottom:45px;
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-bottom:100px;
+  margin-left: 45px;
+  margin-bottom: 100px;
   display: flex;
-  flex-direction: column; /* 세로로 배치 */
-  justify-content: space-between; /* 세로로 각 섹션을 분리 */
+  flex-direction: column; 
+  justify-content: space-between; 
 `;
 
 const Header = styled.div` // year과 month 감싸는 부분

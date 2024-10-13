@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import UserInfoGuest from '../components/homepage/userinfo-guest';
 import ExpenseList from '../components/homepage/expenselist';
-// import Calendar from '../components/homepage/calendar';
 import ExpenseText from '../components/homepage/expensetext';
 import GNB from '../components/GNB'
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ExpenseListContainer = styled.section`
   width: 467px;
-  min-height: 340px;
+  min-height: 365px;
   border-radius: 20px;
   background-color: #fcfcfc;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
@@ -83,8 +83,8 @@ const ExpenseList = () => {
       { id: 3, title: '사당역 혼밥 추천', date: '24.10.01' },
       { id: 4, title: '당근으로 산 자취꿀템 Best 3', date: '24.09.27' },
       { id: 5, title: 'K패스 신청', date: '24.09.14' },
-      { id: 6, title: '추가 소비 기록 1', date: '24.09.13' },
-      { id: 7, title: '추가 소비 기록 2', date: '24.09.12' },
+      { id: 6, title: '개강 기념 대학생 할인 Best 5', date: '24.09.13' },
+      { id: 7, title: '학교 앞 8000원 이하 식당 추천', date: '24.09.12' },
     ];
     setExpenses(fetchedExpenses); // 함수 호출
   }, []); // 빈 배열을 전달해 컴포넌트 마운트 시에만 실행
@@ -108,7 +108,7 @@ const ExpenseList = () => {
   return (
     <ExpenseListContainer>
       <ExpenseContent>
-        <p style={{ fontSize: '25px', fontWeight: 'bold', margin:'0', marginBottom:'10px'}}>전체 보기</p>
+        <p style={{ fontSize: '25px', fontWeight: 'bold', margin:'0', marginBottom:'10px', textAlign:'left'}}>전체 보기</p><br></br>
         {currentItems.map((expense) => (
             <ExpenseItem key={expense.id}>
             <ExpenseTitle>{expense.title}</ExpenseTitle>
